@@ -8,13 +8,22 @@ Student.prototype.setSubject = function(subjectName) {
     this.subjectName = subjectName
 }
 
-Student.prototype.addMark = function(...mark) {
+Student.prototype.addMark = function(mark) {
     if (this.mark === undefined) {
-        this.mark = mark;
+        this.mark = [mark];
     } else {
-        this.mark = [...this.mark, ...mark];
+        this.mark.push(mark);
     }
 }
+
+Student.prototype.addMarks = function(...marks) {
+    if (this.marks === undefined) {
+        this.marks = [...marks];
+    } else {
+        this.mark.push(...marks);
+    }
+}
+
 
 Student.prototype.getAverage = function(Average) {
     if (this.mark === undefined) {
