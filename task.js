@@ -25,7 +25,7 @@ Student.prototype.addMarks = function(...marks) {
 }
 
 
-Student.prototype.getAverage = function(Average) {
+Student.prototype.getAverage = function() {
     if (this.mark === undefined) {
         console.log('Оценки еще не выставлены или были удалены');
     } else {
@@ -33,8 +33,8 @@ Student.prototype.getAverage = function(Average) {
         for (let i = 0; i < this.mark.length; i++) {
             sum = sum + this.mark[i];
         }
-        Average = Number((sum / this.mark.length).toFixed(2));
-        return Average
+        return number((sum / this.mark.length).toFixed(2));
+
     }
 
 }
